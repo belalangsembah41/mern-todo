@@ -15,6 +15,7 @@ const postTodo = async (req, res) => {
   try {
     const newTodo = await TodoModel.create({ todo });
     res.status(200).json(newTodo);
+    console.log(newTodo);
   } catch (error) {
     res.status(400).json({ error: error.message });
   }
